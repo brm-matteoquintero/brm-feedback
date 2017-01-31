@@ -415,18 +415,64 @@ input:-moz-placeholder {
 
 #detail{}
 #detail-arrow{}
-#detail-info{}
-#detail-info div:nth-child(1){}
-#detail-info div:nth-child(2){}
-#detail-info div:nth-child(3){}
+#detail-info{
+	width: 100%;
+	height: 20%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+#detail-info div:nth-child(1){
+	width: 100%;
+	height: 20%;
+	float: left;
+}
+#detail-info div:nth-child(1) h1{}
+#detail-info div:nth-child(2){
+	width: 30%;
+	height: 80%;
+	position: relative;
+	display: block;
+	float: left;
+}
+
+#detail-info div:nth-child(3){
+	width: 70%;
+	height: 80%;
+	position: relative;
+	display: block;
+	float: left;
+}
+
+#detail-info div:nth-child(3){
+}
+
+.detail-stars i{
+	background-image: url(../img/star.png);
+	width: 16px;
+	height: 16px;
+	position: relative;
+	float: left;
+	background-size: cover;
+	margin-right: 2px;
+	margin-top: 23px;
+}
+.detail-stars i.star{
+	background-position: 0px 16px;
+}
+.detail-stars i.fill{
+	background-position: 0px 0px;
+}
+
+#detail-goals{}
+#detail-image{}
+#detail-image img{}
+#detail-description{}
+
+.company-logo{} 
+.articulacion{}
+.deeploy{}
+.brm{}
+.preferente{}
 
 
-h1
-p
-small
-goals
-image
-img
-description
-h2
-p

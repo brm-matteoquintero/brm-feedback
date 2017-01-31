@@ -69,12 +69,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-  .state('app.detail', {
+  .state('app.suggestions', {
     url: '/suggestions/:suggestionid',
     views: {
       'menuContent': {
-        templateUrl: 'templates/detail.html',
-        controller: 'detail'
+        templateUrl: 'templates/detail.html'
       }
     }
   });
