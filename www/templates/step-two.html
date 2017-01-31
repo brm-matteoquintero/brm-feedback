@@ -1,0 +1,27 @@
+<ion-view>
+  <ion-content id="stepone" class="fill">
+
+		<figure id="stepone-arrow" class="arrow down white"></figure>
+
+  	<p id="stepone-copy">
+			Lorem ipsum dolor sit amet, <br>
+			consectetur adipisicing elit.
+  	</p>
+
+    <form ng-submit="doLogin()" id="stepone-form">
+		    <div class="field">
+						<figure class="arrow white down"></figure>
+        		<textarea ng-model="data.description" placeholder="Objetivos"> </textarea>
+		    </div>
+
+    </form>
+
+		<div id="stepone-options">
+			<button type="submit" form="stepone-form">
+				<figure class="arrow blue"></figure>
+				<span>SIGUIENTE</span>
+			</button>
+		</div>
+
+  </ion-content>
+ </ion-view>
