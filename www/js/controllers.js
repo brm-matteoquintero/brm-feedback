@@ -23,4 +23,24 @@ angular.module('starter.controllers', [])
    $state.go('app.stepone');
   }
 
-});
+})
+
+
+
+.controller('stepone', function($scope, $state) {
+
+  $scope.steptwo = function() {
+   $state.go('app.steptwo');
+  }
+
+})
+
+.controller('steptwo', function($scope, $state) {
+
+  $scope.stepthree = function() {
+   $state.go('app.stepthree');
+  }
+
+})
+
+;

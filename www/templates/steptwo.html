@@ -1,14 +1,14 @@
 <ion-view>
-  <ion-content id="stepone" class="fill">
+  <ion-content id="steptwo" class="fill">
 
-		<figure id="stepone-arrow" class="arrow down white"></figure>
+		<figure id="steptwo-arrow" class="arrow down white"></figure>
 
-  	<p id="stepone-copy">
+  	<p id="steptwo-copy">
 			Lorem ipsum dolor sit amet, <br>
 			consectetur adipisicing elit.
   	</p>
 
-    <form ng-submit="doLogin()" id="stepone-form">
+    <form id="steptwo-form">
 		    <div class="field">
 						<figure class="arrow white down"></figure>
         		<textarea ng-model="data.description" placeholder="Objetivos"> </textarea>
@@ -16,10 +16,16 @@
 
     </form>
 
-		<div id="stepone-options">
-			<button type="submit" form="stepone-form">
+		<div id="steptwo-options">
+			<button>
+				<a href="#/app/stepthree"></a>
 				<figure class="arrow blue"></figure>
-				<span>SIGUIENTE</span>
+				<span>SUBIR IMAGEN</span>
+			</button>
+			<button>
+				<a href="#/app/suggestions"></a>
+				<figure class="arrow ocher"></figure>
+				<span>TERMINAR SUGERENCIA</span>
 			</button>
 		</div>
 
