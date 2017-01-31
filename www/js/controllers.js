@@ -69,22 +69,6 @@ angular.module('starter.controllers', [])
    		$state.go('app.stepone');
     }, 1000);
   };
-  
-
-    $scope.filter = function() {
-    $scope.modalCompanies.show();
-  };
-
-    $scope.order = function() {
-    $scope.modalCompanies.show();
-  };
-
-    $scope.view = function() {
-    $scope.modalCompanies.show();
-  };
-
-
-
 
 })
 

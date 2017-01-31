@@ -604,6 +604,15 @@ input:-moz-placeholder {
 
 
 
+.order-option{
+	height: calc(100%/3);
+	display: block;
+	position: relative;
+	width: 100%;
+}
+.order-option:nth-child(odd){background-color: #364775;}
+.order-option:nth-child(even){background-color: #74c2ed;}
+.order-option img{display: block;margin: 0 auto 0 auto;padding-top: 20%;}
 /*STEP ONE*/
 #stepone{
 	background-image: url(../img/stepone.jpg);
