@@ -17,5 +17,10 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('suggestion', function($scope, $stateParams) {
+.controller('companies', function($scope, $state) {
+
+  $scope.stepone = function() {
+   $state.go('app.stepone');
+  }
+
 });

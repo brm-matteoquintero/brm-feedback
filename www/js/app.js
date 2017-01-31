@@ -38,16 +38,49 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
+  .state('app.stepone', {
+      url: '/stepone',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/stepone.html',
+        }
+      }
+    })
+  .state('app.steptwo', {
+      url: '/steptwo',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/steptwo.html',
+        }
+      }
+    })
+  .state('app.stepthree', {
+      url: '/stepthree',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/stepthree.html',
+        }
+      }
+    })
   .state('app.register', {
       url: '/register',
       views: {
         'menuContent': {
           templateUrl: 'templates/register.html',
-        	controller: 'register'
         }
       }
     })
+
+    .state('app.companies', {
+      url: '/companies',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/companies.html',
+        	controller: 'companies'
+        }
+      }
+    })
+
     .state('app.suggestions-row', {
       url: '/suggestions',
       views: {
@@ -57,7 +90,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
 
     .state('app.suggestions-square', {
       url: '/suggestions',
