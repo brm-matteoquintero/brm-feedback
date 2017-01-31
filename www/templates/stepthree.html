@@ -1,23 +1,19 @@
-<ion-view>
-  <ion-content id="stepone" class="fill">
+<ion-view view-title="Paso 3">
 
-		<figure id="stepone-arrow" class="arrow down white"></figure>
+  <ion-content id="stepthree" class="fill">
 
-  	<p id="stepone-copy">
+		<figure id="stepthree-arrow" class="arrow down blue"></figure>
+  	<p id="stepthree-copy">
 			Lorem ipsum dolor sit amet, <br>
 			consectetur adipisicing elit.
   	</p>
 
-    <form id="stepone-form">
-		    <div class="field">
-						<figure class="arrow white down"></figure>
-        		<textarea ng-model="data.description" placeholder="Objetivos"> </textarea>
-		    </div>
+    <div id="stepthree-area">
+   	 <span>Haga tap para subir la imagen.</span>
+    </div>
 
-    </form>
-
-		<div id="stepone-options">
-			<button type="submit" form="stepone-form">
+		<div id="stepthree-options">
+			<button type="submit" form="stepthree-form" ng-click="steptwo()">
 				<figure class="arrow blue"></figure>
 				<span>SIGUIENTE</span>
 			</button>

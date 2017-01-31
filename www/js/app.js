@@ -43,6 +43,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/stepone.html',
+        	controller: 'stepone'
         }
       }
     })
@@ -51,6 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/steptwo.html',
+        	controller: 'steptwo'
         }
       }
     })
@@ -59,6 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/stepthree.html',
+        	controller: 'stepthree'
         }
       }
     })

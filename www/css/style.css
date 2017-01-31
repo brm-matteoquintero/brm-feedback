@@ -267,7 +267,7 @@ form{
 
 form .field{width: 100%;position: relative;}
 
-form .field:nth-child(1) figure{height: 30px;top: -30px;left: 35px;}
+form .field:nth-child(1) figure{height: 60px;bottom: -60px;right: 78px;}
 
 form .field:nth-child(2) figure{bottom: -60px;height: 60px;right: 6px;}
 
@@ -623,7 +623,9 @@ input:-moz-placeholder {
 	font-size: 25px;
 }
 
-
+.stepone-info{
+	position: absolute;
+}
 
 /*STEP TWO*/
 
@@ -633,8 +635,8 @@ input:-moz-placeholder {
 }
 
 #steptwo-arrow{
-	height: 96px;
-	right: 60px;
+	height: 71px;
+	left: 10px;
 }
 
 #steptwo-logo{
@@ -685,12 +687,162 @@ input:-moz-placeholder {
 
 #steptwo-options button a{position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 1;}
 
-#steptwo-options button:nth-child(1) figure{height: 40px;top: -40px;left: 31px;}
+#steptwo-options button:nth-child(1) figure{height: 80px;top: -80px;left: 95px;}
 
-#steptwo-options button:nth-child(2) figure{height: 90px;top: -90px;right: 6px;}
+#steptwo-options button:nth-child(2) figure{height: 30px;top: -30px;right: 39px;}
 
 #steptwo-options button span{
 	font-family: light;
 	color: #fff;
+	font-size: 18px;
+	line-height: 14px;
+}
+
+.menu-left .bar.bar-stable{
+}
+.menu-left ion-item {
+	background-color: #364775;
+	font-size: 18px;
+	font-family: regular;
+	color: #fff;
+	border: 0;
+}
+.menu-left ion-item a{
+	background-color: #364775!important;
+}
+.menu-left .scroll-content{
+	background-color: #364775;
+}
+
+.bar.bar-stable{
+	background: #364775;
+}
+.bar.bar-stable .title{
+	color: #fff;
+	font-family: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-align: right;
+	padding: 0;
+	margin: 0 auto;
+	width: 80%;
+	display: block;
+	top: 2px;
+	left: 0!important;
+	right: 0!important;
+}
+.bar-stable .button.button-clear{
+	color: #fff;
+}
+
+#companies-close{position: fixed;width: 35px;right: 10px;height: 35px;border: 0;top: 10px;z-index: 3;background: transparent;}
+#companies-close a{ width: 100%; height: 100%; z-index: 2; position: absolute; color: transparent; }
+#companies-close:hover::before, #companies-close:hover::after {
+  background: #1ebcc5;
+}
+
+#companies-close::before, #companies-close::after {
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -2px;
+  background: #ffffff;
+}
+#companies-close::after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(-45deg);
+}
+#companies-close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(45deg);
+}
+
+
+
+.bar .buttons span{
+	font-family: light;
+	font-size: 12px;
+	text-transform: lowercase;
+}
+
+
+/*STEP three*/
+
+#stepthree-arrow{
+	height: 58px;
+	right: 100px;
+}
+
+#stepthree-copy{
+	position: relative;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	text-align: left;
+	font-family: medium;
+	font-size: 29px;
+	line-height: 28px;
+	padding: 20% 0;
+	color: #364775;
+}
+
+
+#stepthree-options{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+#stepthree-options button{
+	width: 100%;
+	float: left;
+	height: 62px;
+	border: 0;
+	position: relative;
+	background-color:#364775;
+}
+
+#stepthree-options button figure{
+	height: 76px;
+	top: -76px;
+	left: 31px;
+}
+
+#stepthree-options button span{
+	font-family: light;
+	color: #fff;
 	font-size: 25px;
+}
+
+.stepthree-info{
+	position: absolute;
+}
+#stepthree-area{
+	width: 100%;
+	background-color: #eaeaea;
+	background-image: url(../img/thumbnail.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 250px;
+	overflow: hidden;
+}
+#stepthree-area span{
+	color: #a7aaa9;
+	text-align: center;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 18px;
+	font-family: light;
+	line-height: 16px;
+	margin-top: 15px;
 }

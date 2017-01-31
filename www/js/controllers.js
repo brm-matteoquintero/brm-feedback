@@ -6,7 +6,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('suggestions', function($scope) {
+.controller('suggestions', function($scope, $state,$ionicModal, $timeout) {
   $scope.suggestions = [
     { title: 'Juan', id: 1, thumbnail:"logo-articulacion.jpg" },
     { title: 'Luis', id: 2, thumbnail:"logo-preferente.jpg" },
@@ -15,17 +15,35 @@ angular.module('starter.controllers', [])
     { title: 'Matilde', id: 5, thumbnail:"logo-articulacion.jpg" },
     { title: 'Ana', id: 6, thumbnail:"logo-preferente.jpg" }
   ];
-})
 
-.controller('companies', function($scope, $state) {
+  $ionicModal.fromTemplateUrl('templates/companies.html', {
+    scope: $scope
+  }).then(function(modalCompanies) {
+    $scope.modalCompanies = modalCompanies;
+  });
+
+  $scope.closeCompanies = function() {
+    $scope.modalCompanies.hide();
+  };
+
+  $scope.createSuggerence = function() {
+    $scope.modalCompanies.show();
+  };
 
   $scope.stepone = function() {
-   $state.go('app.stepone');
-  }
+    $timeout(function() {
+      $scope.closeCompanies();
+   		$state.go('app.stepone');
 
+    }, 1000);
+  };
+  
 })
 
+.controller('companies', function($scope) {
 
+
+})
 
 .controller('stepone', function($scope, $state) {
 
@@ -42,5 +60,8 @@ angular.module('starter.controllers', [])
   }
 
 })
+.controller('stepthree', function($scope, $state) {
 
+
+})
 ;
