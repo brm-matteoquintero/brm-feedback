@@ -81,7 +81,8 @@
 
 #login{
 	background-image: url(../img/login.jpg);
-	background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 #login-arrow{
@@ -554,20 +555,53 @@ input:-moz-placeholder {
   transform: rotate(90deg);
 }
 
-#companies{}
-#companies .company-logo{
+/*COMPANIES*/
+
+.companies .company-logo{
 	height: calc(100%/4);
 	display: block;
 	position: relative;
 }
 
-#companies .articulacion>img{width: 60%;margin-top: 11%;}
+.companies .articulacion>img{width: 60%;margin-top: 11%;}
 
-#companies .brm>img{width: 60%;margin-top: 6%;}
+.companies .brm>img{width: 60%;margin-top: 6%;}
 
-#companies .deeploy>img{width: 60%;margin-top: 14%;}
+.companies .deeploy>img{width: 60%;margin-top: 14%;}
 
-#companies .preferente>img{width: 60%;margin-top: 13%;}
+.companies .preferente>img{width: 60%;margin-top: 13%;}
+
+.modal-close{position: fixed;width: 35px;right: 10px;height: 35px;border: 0;top: 10px;z-index: 3;background: transparent;}
+.modal-close a{ width: 100%; height: 100%; z-index: 2; position: absolute; color: transparent; }
+.modal-close:hover::before, .modal-close:hover::after {
+  background: #1ebcc5;
+}
+
+.modal-close::before, .modal-close::after {
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -2px;
+  background: #ffffff;
+}
+.modal-close::after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(-45deg);
+}
+.modal-close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(45deg);
+}
+
 
 
 /*STEP ONE*/
@@ -735,36 +769,6 @@ input:-moz-placeholder {
 	color: #fff;
 }
 
-#companies-close{position: fixed;width: 35px;right: 10px;height: 35px;border: 0;top: 10px;z-index: 3;background: transparent;}
-#companies-close a{ width: 100%; height: 100%; z-index: 2; position: absolute; color: transparent; }
-#companies-close:hover::before, #companies-close:hover::after {
-  background: #1ebcc5;
-}
-
-#companies-close::before, #companies-close::after {
-  content: '';
-  position: absolute;
-  height: 1.5px;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  margin-top: -2px;
-  background: #ffffff;
-}
-#companies-close::after {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(-45deg);
-}
-#companies-close::before {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(45deg);
-}
 
 
 

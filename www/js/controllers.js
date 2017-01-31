@@ -30,14 +30,62 @@ angular.module('starter.controllers', [])
     $scope.modalCompanies.show();
   };
 
+  $ionicModal.fromTemplateUrl('templates/filter.html', {
+    scope: $scope
+  }).then(function(modalFilter) {
+    $scope.modalFilter = modalFilter;
+  });
+
+  $scope.closeFilter = function() {
+    $scope.modalFilter.hide();
+  };
+
+  $scope.filter = function() {
+    $scope.modalFilter.show();
+  };
+
+
+  $ionicModal.fromTemplateUrl('templates/order.html', {
+    scope: $scope
+  }).then(function(modalOrder) {
+    $scope.modalOrder = modalOrder;
+  });
+
+  $scope.closeOrder = function() {
+    $scope.modalOrder.hide();
+  };
+
+  $scope.order = function() {
+    $scope.modalOrder.show();
+  };
+
+  $scope.view = function() {
+   		$state.go('app.suggestions-square');
+  };
+
   $scope.stepone = function() {
     $timeout(function() {
       $scope.closeCompanies();
    		$state.go('app.stepone');
-
     }, 1000);
   };
   
+
+    $scope.filter = function() {
+    $scope.modalCompanies.show();
+  };
+
+    $scope.order = function() {
+    $scope.modalCompanies.show();
+  };
+
+    $scope.view = function() {
+    $scope.modalCompanies.show();
+  };
+
+
+
+
 })
 
 .controller('companies', function($scope) {
