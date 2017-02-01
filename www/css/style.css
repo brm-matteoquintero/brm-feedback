@@ -895,9 +895,6 @@ input:-moz-placeholder {
 
 #steptwo form .field:nth-child(1) figure{height: 60px;bottom: -60px;right: 48px;top: inherit;left: inherit;}
 
-
-.menu-left .bar.bar-stable{
-}
 .menu-left ion-item {
 	background-color: #364775;
 	font-size: 18px;
@@ -912,10 +909,10 @@ input:-moz-placeholder {
 	background-color: #364775;
 }
 
-.bar.bar-stable{
+ion-header-bar.nav-blue {
 	background: #364775;
 }
-.bar.bar-stable .title{
+ion-header-bar.nav-blue .title{
 	color: #fff;
 	font-family: bold;
 	font-size: 18px;
@@ -929,19 +926,25 @@ input:-moz-placeholder {
 	left: 0!important;
 	right: 0!important;
 }
-.bar-stable .button.button-clear{
+ion-header-bar.nav-blue .button.button-clear{
 	color: #fff;
 }
 
-
-
-
-.bar .buttons span{
+ion-header-bar.nav-blue .buttons span{
 	font-family: light;
 	font-size: 12px;
 	text-transform: lowercase;
 }
 
+ion-header-bar.nav-white .button.button-clear{
+	color: #364775;
+}
+
+ion-header-bar.nav-white .buttons span{
+	font-family: light;
+	font-size: 12px;
+	text-transform: lowercase;
+}
 
 /*STEP three*/
 
@@ -1083,9 +1086,9 @@ input:-moz-placeholder {
 #logo-white{
 	position: relative;
 	height: 23px;
-	z-index: 15;
 	display: block;
 	margin: 11px 0 0 80px;
+	z-index: 10;
 }
 
 #info-user{width: 100%;position: relative;height: 145px;padding: 0 6%;margin-bottom: 7%;}
