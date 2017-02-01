@@ -338,8 +338,12 @@ input:-moz-placeholder {
 	background-image: url(../img/order.png);
 }
 
-#suggestions-menu div:nth-child(3) i{
+#suggestions-row #suggestions-menu div:nth-child(3) i{
 	background-image: url(../img/view-square.png);
+}
+
+#suggestions-square #suggestions-menu div:nth-child(3) i{
+	background-image: url(../img/view-row.png);
 }
 
 .suggestion{
@@ -350,7 +354,7 @@ input:-moz-placeholder {
 	display: block;
 }
 
-.suggestion a{
+#suggestions-row .suggestion a{
 	position: absolute;
 	z-index: 2;
 	width: 100%;
@@ -359,37 +363,37 @@ input:-moz-placeholder {
 	top:0;
 	color: transparent;
 }
-.suggestion:nth-child(odd){
+#suggestions-row .suggestion:nth-child(odd){
 	background-color: #dedede;
 }
 
-.suggestion:nth-child(even){
+#suggestions-row .suggestion:nth-child(even){
 	background-color: #eaeaea;
 }
 
-.suggestion .suggestion-info{
+#suggestions-row .suggestion .suggestion-info{
 	width: 56%;
 	float: left;
 	height: 100%;
 	padding: 4% 0 0 3%;
 }
-.suggestion .suggestion-info strong{
+#suggestions-row .suggestion .suggestion-info strong{
 	font-family: medium;
 	color: #5b5b5b;
 	font-size: 20px;
 }
-.suggestion .suggestion-info p{
+#suggestions-row .suggestion .suggestion-info p{
 	font-family: 'light-oblique';
 	color: #a7aaa9;
 	margin: 0;
 	font-size: 15px;
 }
-.suggestion .suggestion-stars{
+#suggestions-row .suggestion .suggestion-stars{
 	width: 26%;
 	float: left;
 	height: 100%;
 }
-.suggestion .suggestion-stars i{
+#suggestions-row .suggestion .suggestion-stars i{
 	background-image: url(../img/star.png);
 	width: 16px;
 	height: 16px;
@@ -399,23 +403,90 @@ input:-moz-placeholder {
 	margin-right: 2px;
 	margin-top: 23px;
 }
-.suggestion .suggestion-stars i.star{
+#suggestions-row .suggestion .suggestion-stars i.star{
 	background-position: 0px 16px;
 }
-.suggestion .suggestion-stars i.fill{
+#suggestions-row .suggestion .suggestion-stars i.fill{
 	background-position: 0px 0px;
 }
-.suggestion .suggestion-company{
+#suggestions-row .suggestion .suggestion-company{
 	width: 18%;
 	height: 100%;
 	float: left;
 }
-.suggestion .suggestion-company img{
+#suggestions-row .suggestion .suggestion-company img{
 	width: 65px;
 	height: 65px;
 	float: right;
 }
 
+
+
+#suggestions-square .suggestion a{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height:100%;
+	left: 0;
+	top:0;
+	color: transparent;
+}
+#suggestions-square .suggestion:nth-child(odd){
+	background-color: #dedede;
+}
+
+#suggestions-square .suggestion:nth-child(even){
+	background-color: #eaeaea;
+}
+
+#suggestions-square .suggestion .suggestion-info{
+	width: 56%;
+	float: left;
+	height: 100%;
+	padding: 4% 0 0 3%;
+}
+#suggestions-square .suggestion .suggestion-info strong{
+	font-family: medium;
+	color: #5b5b5b;
+	font-size: 20px;
+}
+#suggestions-square .suggestion .suggestion-info p{
+	font-family: 'light-oblique';
+	color: #a7aaa9;
+	margin: 0;
+	font-size: 15px;
+}
+#suggestions-square .suggestion .suggestion-stars{
+	width: 26%;
+	float: left;
+	height: 100%;
+}
+#suggestions-square .suggestion .suggestion-stars i{
+	background-image: url(../img/star.png);
+	width: 16px;
+	height: 16px;
+	position: relative;
+	float: left;
+	background-size: cover;
+	margin-right: 2px;
+	margin-top: 23px;
+}
+#suggestions-square .suggestion .suggestion-stars i.star{
+	background-position: 0px 16px;
+}
+#suggestions-square .suggestion .suggestion-stars i.fill{
+	background-position: 0px 0px;
+}
+#suggestions-square .suggestion .suggestion-company{
+	width: 18%;
+	height: 100%;
+	float: left;
+}
+#suggestions-square .suggestion .suggestion-company img{
+	width: 65px;
+	height: 65px;
+	float: right;
+}
 /*DETAIL SUGGESTION*/
 
 
@@ -444,7 +515,7 @@ input:-moz-placeholder {
 	color: #364775;
 }
 #detail-info>div:nth-child(2){
-	width: 65%;
+	width: 60%;
 	position: relative;
 	display: block;
 	float: left;
@@ -455,29 +526,29 @@ input:-moz-placeholder {
 #detail-info>div:nth-child(2) small{font-family: light-oblique;color: #a7aaa9;margin-top: 6px;display: block;}
 
 #detail-info>div:nth-child(3){
-	width: 35%;
+	width: 40%;
 	position: relative;
 	display: block;
 	float: left;
 }
 .detail-stars{
-	width: calc( calc(16px*5) + calc(2px*5) );
-	height: 16px;
+	width: calc( calc(25px*5) + calc(5px*5) );
+	height: 25px;
 	position: relative;
 	display: block;
 	margin: 5px auto 0 auto;
 }
 .detail-stars i{
 	background-image: url(../img/star.png);
-	width: 16px;
-	height: 16px;
+	width: 25px;
+	height: 25px;
 	position: relative;
 	float: left;
 	background-size: cover;
-	margin-right: 2px;
+	margin-right: 5px;
 }
 .detail-stars i.star{
-	background-position: 0px 16px;
+	background-position: 0px 25px;
 }
 .detail-stars i.fill{
 	background-position: 0px 0px;
@@ -571,7 +642,7 @@ input:-moz-placeholder {
 
 .companies .preferente>img{width: 60%;margin-top: 13%;}
 
-.modal-close{position: fixed;width: 35px;right: 10px;height: 35px;border: 0;top: 10px;z-index: 3;background: transparent;}
+.modal-close{position: absolute;width: 35px;right: 10px;height: 35px;border: 0;top: 10px;z-index: 3;background: transparent;}
 .modal-close a{ width: 100%; height: 100%; z-index: 2; position: absolute; color: transparent; }
 .modal-close:hover::before, .modal-close:hover::after {
   background: #1ebcc5;
@@ -858,4 +929,62 @@ input:-moz-placeholder {
 	font-family: light;
 	line-height: 16px;
 	margin-top: 15px;
+}
+
+
+
+/*REGISTER*/
+
+#alert{background-color: #74c2ed;}
+
+#alert-arrow{
+	height: 58px;
+	right: 100px;
+}
+#alert-icon{
+	margin-top: 24%;
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+}
+#alert-icon::before{content:""; width: 100px;background-image: url(../img/alert.png);height: 100px;background-repeat: no-repeat;background-size: contain;display: block;background-position: center;position: relative;margin: 0 auto 0 auto;}
+#alert-options{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+#alert-options button{
+	width: 100%;
+	float: left;
+	height: 62px;
+	border: 0;
+	position: relative;
+	background-color:#364775;
+}
+
+#alert-options button figure{
+	height: 76px;
+	top: -76px;
+	left: 31px;
+}
+
+#alert-options button span{
+	font-family: light;
+	color: #fff;
+	font-size: 25px;
+}
+
+#alert-copy{
+	position: relative;
+	width: 100%;
+	display: block;
+	margin: 0 auto 0 auto;
+	text-align: center;
+	font-family: medium;
+	font-size: 35px;
+	line-height: 40px;
+	padding: 8% 3%;
+	color: #ffffff;
+	float: left;
 }

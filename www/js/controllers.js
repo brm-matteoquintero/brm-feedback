@@ -85,15 +85,38 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('steptwo', function($scope, $state) {
+.controller('steptwo', function($scope, $state,$ionicModal) {
 
   $scope.stepthree = function() {
    $state.go('app.stepthree');
   }
 
+  $scope.finish = function() {
+   $state.go('app.suggestions-row');
+  }
+
+  $ionicModal.fromTemplateUrl('templates/alert.html', {
+    scope: $scope
+  }).then(function(modalAlert) {
+    $scope.modalAlert = modalAlert;
+  });
+
+  $scope.closeAlert = function() {
+    $scope.modalAlert.hide();
+  };
+
+  $scope.openAlert = function() {
+    $scope.modalAlert.show();
+  };
+
+	$scope.message="Esta seguro que desaea guardar sin subir una imagen"; 
+
+
 })
 .controller('stepthree', function($scope, $state) {
-
+  $scope.finish = function() {
+   $state.go('app.suggestions-row');
+  }
 
 })
 ;
