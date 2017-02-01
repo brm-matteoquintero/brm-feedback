@@ -88,7 +88,17 @@
 #login-arrow{
 	height: 96px;
 	right: 60px;
+	animation-name: arrowtop;
+	animation-duration: 4s;
 }
+
+
+@keyframes arrowtop {
+    from {top:-100px}
+    to {top:0;}
+}
+
+
 
 #login-logo{
 	width: 110px;
@@ -776,7 +786,9 @@ input:-moz-placeholder {
 #stepone-arrow{
 	height: 58px;
 	right: 100px;
+
 }
+
 
 #stepone-copy{
 	position: relative;
