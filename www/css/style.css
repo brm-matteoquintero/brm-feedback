@@ -268,7 +268,7 @@ form{
 
 form .field{width: 100%;position: relative;}
 
-form .field:nth-child(1) figure{height: 60px;bottom: -60px;right: 78px;}
+form .field:nth-child(1) figure{height: 30px;top: -30px;left: 78px;}
 
 form .field:nth-child(2) figure{bottom: -60px;height: 60px;right: 6px;}
 
@@ -330,11 +330,11 @@ input:-moz-placeholder {
 	display: block;
 }
 
-#suggestions-menu div:nth-child(1) i{
+#suggestions-row #suggestions-menu div:nth-child(1) i{
 	background-image: url(../img/filter.png);
 }
 
-#suggestions-menu div:nth-child(2) i{
+#suggestions-row #suggestions-menu div:nth-child(2) i{
 	background-image: url(../img/order.png);
 }
 
@@ -342,16 +342,37 @@ input:-moz-placeholder {
 	background-image: url(../img/view-square.png);
 }
 
+#suggestions-square #suggestions-menu div:nth-child(1) i{
+	background-image: url(../img/filter-white.png);
+}
+
+#suggestions-square #suggestions-menu div:nth-child(2) i{
+	background-image: url(../img/order-white.png);
+}
+
 #suggestions-square #suggestions-menu div:nth-child(3) i{
 	background-image: url(../img/view-row.png);
 }
 
-.suggestion{
+#suggestions-square div i{
+	color:#fff;
+}
+
+#suggestions-row .suggestion{
 	width: 100%;
 	height: 65px;
 	overflow: hidden;
 	position: relative;
 	display: block;
+}
+
+#suggestions-square .suggestion{
+	width: 50%;
+	overflow: hidden;
+	position: relative;
+	display: block;
+	float: left;
+	height: 30%;
 }
 
 #suggestions-row .suggestion a{
@@ -419,7 +440,12 @@ input:-moz-placeholder {
 	height: 65px;
 	float: right;
 }
-
+#suggestions-square{
+	background-image: url(../img/list.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 
 
 #suggestions-square .suggestion a{
@@ -431,45 +457,89 @@ input:-moz-placeholder {
 	top:0;
 	color: transparent;
 }
-#suggestions-square .suggestion:nth-child(odd){
-	background-color: #dedede;
+
+#suggestions-square .suggestion:nth-child(4n-1),
+#suggestions-square .suggestion:nth-child(4n){
+	 background-color: rgba(225, 225, 225, 0.32);
 }
 
-#suggestions-square .suggestion:nth-child(even){
-	background-color: #eaeaea;
+#suggestions-square .suggestion:nth-child(4n-2),
+#suggestions-square .suggestion:nth-child(4n-3){
+ background-color: rgba(182, 182, 182, 0.32); 
 }
+
+#suggestions-square .suggestion:nth-child(4n-2) .suggestion-company img{float: left;padding-left: 10%;}
+#suggestions-square .suggestion:nth-child(4n-2) .suggestion-info div{padding-left: 10%;}
+#suggestions-square .suggestion:nth-child(4n-2) .suggestion-stars i{float: right;margin-left: 2px;}
+#suggestions-square .suggestion:nth-child(4n-2) .suggestion-stars div{padding-right: 10%;}
+
+#suggestions-square .suggestion:nth-child(4n-1) .suggestion-company{ bottom: 0;}
+#suggestions-square .suggestion:nth-child(4n-1) .suggestion-company img{float: right;padding-right: 10%;}
+#suggestions-square .suggestion:nth-child(4n-1) .suggestion-info div{padding-left: 10%;}
+#suggestions-square .suggestion:nth-child(4n-1) .suggestion-stars i{float: left;margin-right: 2px;}
+#suggestions-square .suggestion:nth-child(4n-1) .suggestion-stars div{padding-left: 10%;}
+#suggestions-square .suggestion:nth-child(4n-1) .suggestion-stars{top: 0;}
+
+#suggestions-square .suggestion:nth-child(4n) .suggestion-company img{float: right;padding-right: 10%;}
+#suggestions-square .suggestion:nth-child(4n) .suggestion-info div{padding-left: 10%;}
+#suggestions-square .suggestion:nth-child(4n) .suggestion-stars i{float: left;margin-right: 2px;}
+#suggestions-square .suggestion:nth-child(4n) .suggestion-stars div{padding-left: 10%;}
+
+#suggestions-square .suggestion:nth-child(4n-3) .suggestion-company{ bottom: 0;}
+#suggestions-square .suggestion:nth-child(4n-3) .suggestion-company img{float: left;padding-left: 10%;}
+#suggestions-square .suggestion:nth-child(4n-3) .suggestion-info div{padding-left: 10%;}
+#suggestions-square .suggestion:nth-child(4n-3) .suggestion-stars i{float: right;margin-left: 2px;}
+#suggestions-square .suggestion:nth-child(4n-3) .suggestion-stars div{padding-right: 10%;}
+#suggestions-square .suggestion:nth-child(4n-3) .suggestion-stars{top: 0;}
+
+
+
 
 #suggestions-square .suggestion .suggestion-info{
-	width: 56%;
-	float: left;
-	height: 100%;
-	padding: 4% 0 0 3%;
+	width: 100%;
+	height: 60%;
+	position: absolute;
+	top: 20%;
+	display: table;
+}
+#suggestions-square .suggestion .suggestion-info div{
+	display: table-cell;
+	vertical-align: middle;
 }
 #suggestions-square .suggestion .suggestion-info strong{
 	font-family: medium;
-	color: #5b5b5b;
+	color: #ffffff;
 	font-size: 20px;
+	width: 100%;
 }
 #suggestions-square .suggestion .suggestion-info p{
 	font-family: 'light-oblique';
-	color: #a7aaa9;
+	color: #ffffff;
 	margin: 0;
 	font-size: 15px;
+	width: 100%;
+	position: relative;
+	top: 0;
+	line-height: 15px;
+}
+#suggestions-square .suggestion .suggestion-stars div{
+	display: table-cell;
+	vertical-align: middle;
 }
 #suggestions-square .suggestion .suggestion-stars{
-	width: 26%;
-	float: left;
-	height: 100%;
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	top: 80%;
+	display: table;
 }
 #suggestions-square .suggestion .suggestion-stars i{
-	background-image: url(../img/star.png);
+	background-image: url(../img/star-white.png);
 	width: 16px;
 	height: 16px;
 	position: relative;
 	float: left;
 	background-size: cover;
-	margin-right: 2px;
-	margin-top: 23px;
 }
 #suggestions-square .suggestion .suggestion-stars i.star{
 	background-position: 0px 16px;
@@ -478,15 +548,26 @@ input:-moz-placeholder {
 	background-position: 0px 0px;
 }
 #suggestions-square .suggestion .suggestion-company{
-	width: 18%;
-	height: 100%;
-	float: left;
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	display: table;
+}
+#suggestions-square .suggestion .suggestion-company  div{
+	display: table-cell;
+	vertical-align: middle;
+	max-height: 20px;
+	height: 20px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
 }
 #suggestions-square .suggestion .suggestion-company img{
-	width: 65px;
-	height: 65px;
-	float: right;
+	height: 100%;
 }
+
+
+
 /*DETAIL SUGGESTION*/
 
 
@@ -812,6 +893,9 @@ input:-moz-placeholder {
 	line-height: 14px;
 }
 
+#steptwo form .field:nth-child(1) figure{height: 60px;bottom: -60px;right: 48px;top: inherit;left: inherit;}
+
+
 .menu-left .bar.bar-stable{
 }
 .menu-left ion-item {
@@ -987,4 +1071,43 @@ input:-moz-placeholder {
 	padding: 8% 3%;
 	color: #ffffff;
 	float: left;
+}
+#logo-blue{
+	position: relative;
+	height: 30px;
+	width: inherit;
+	z-index: 15;
+	display: block;
+	margin: 5px auto 0 auto;
+}
+#logo-white{
+	position: relative;
+	height: 23px;
+	z-index: 15;
+	display: block;
+	margin: 11px 0 0 80px;
+}
+
+#info-user{width: 100%;position: relative;height: 145px;padding: 0 6%;margin-bottom: 7%;}
+
+#info-user img{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	display: block;
+	margin: 9% auto 7% auto;
+}
+
+#info-user p{
+	font-family: medium;
+	color: #fff;
+	font-size: 20px;
+	margin: 0;
+}
+
+#info-user small{
+	font-family: light-oblique;
+	color: #fff;
+	font-size: 14px;
 }

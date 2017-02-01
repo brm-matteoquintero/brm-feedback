@@ -3,7 +3,12 @@ angular.module('starter.controllers', [])
 .controller('register', function($state, $scope) {
   $scope.doLogin = function() {
    $state.go('app.suggestions-row');
+   $scope.menu="white"; 
   };
+})
+
+.controller('login', function($state, $scope) {
+		$scope.menu="white"; 
 })
 
 .controller('suggestions', function($scope, $state,$ionicModal, $timeout) {
@@ -14,6 +19,22 @@ angular.module('starter.controllers', [])
     { title: 'Luisa', id: 4, thumbnail:"logo-brm.jpg" },
     { title: 'Matilde', id: 5, thumbnail:"logo-articulacion.jpg" },
     { title: 'Ana', id: 6, thumbnail:"logo-preferente.jpg" }
+  ];
+
+
+  $scope.suggestionsSq = [
+    { title: 'Juan', id: 1, thumbnail:"company/articulacion-white.png" },
+    { title: 'Luis', id: 2, thumbnail:"company/preferente-white.png" },
+    { title: 'Andres', id: 3, thumbnail:"company/deeploy-white.png" },
+    { title: 'Luisa', id: 4, thumbnail:"company/brm-white.png" },
+    { title: 'Matilde', id: 5, thumbnail:"company/articulacion-white.png" },
+    { title: 'Ana', id: 6, thumbnail:"company/preferente-white.png" },
+    { title: 'Juan', id: 1, thumbnail:"company/articulacion-white.png" },
+    { title: 'Luis', id: 2, thumbnail:"company/preferente-white.png" },
+    { title: 'Andres', id: 3, thumbnail:"company/deeploy-white.png" },
+    { title: 'Luisa', id: 4, thumbnail:"company/brm-white.png" },
+    { title: 'Matilde', id: 5, thumbnail:"company/articulacion-white.png" },
+    { title: 'Ana', id: 6, thumbnail:"company/preferente-white.png" }
   ];
 
   $ionicModal.fromTemplateUrl('templates/companies.html', {
@@ -59,8 +80,12 @@ angular.module('starter.controllers', [])
     $scope.modalOrder.show();
   };
 
-  $scope.view = function() {
+  $scope.viewSquare = function() {
    		$state.go('app.suggestions-square');
+  };
+
+  $scope.viewRow = function() {
+   		$state.go('app.suggestions-row');
   };
 
   $scope.stepone = function() {
@@ -109,7 +134,7 @@ angular.module('starter.controllers', [])
     $scope.modalAlert.show();
   };
 
-	$scope.message="Esta seguro que desaea guardar sin subir una imagen"; 
+	$scope.message="Está seguro que desaea guardar sin subir una imagen"; 
 
 
 })
