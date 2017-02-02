@@ -370,7 +370,7 @@ input:-moz-placeholder {
 
 #suggestions-row .suggestion{
 	width: 100%;
-	height: 65px;
+	height: 60px;
 	overflow: hidden;
 	position: relative;
 	display: block;
@@ -403,7 +403,7 @@ input:-moz-placeholder {
 }
 
 #suggestions-row .suggestion .suggestion-info{
-	width: 56%;
+	width: 55%;
 	float: left;
 	height: 100%;
 	padding: 4% 0 0 3%;
@@ -441,13 +441,12 @@ input:-moz-placeholder {
 	background-position: 0px 0px;
 }
 #suggestions-row .suggestion .suggestion-company{
-	width: 18%;
+	width: 19%;
 	height: 100%;
 	float: left;
 }
 #suggestions-row .suggestion .suggestion-company img{
-	width: 65px;
-	height: 65px;
+	height: 100%;
 	float: right;
 }
 #suggestions-square{
@@ -602,11 +601,11 @@ input:-moz-placeholder {
 	margin: 0;
 	font-family: bold;
 	letter-spacing: -2px;
-	line-height: 35px;
+	line-height: 32px;
 	color: #364775;
 }
 #detail-info>div:nth-child(2){
-	width: 60%;
+	width: 48%;
 	position: relative;
 	display: block;
 	float: left;
@@ -617,7 +616,7 @@ input:-moz-placeholder {
 #detail-info>div:nth-child(2) small{font-family: light-oblique;color: #a7aaa9;margin-top: 6px;display: block;}
 
 #detail-info>div:nth-child(3){
-	width: 40%;
+	width: 52%;
 	position: relative;
 	display: block;
 	float: left;
@@ -676,6 +675,8 @@ input:-moz-placeholder {
 .company-logo{
 	width: 100%;
 	padding: 3% 0;
+	display: block;
+	margin: 0 auto;
 }
 .company-logo img{width: 80%;position: relative;margin: 0 auto 0 auto;display: block;} 
 .articulacion{
@@ -736,7 +737,7 @@ input:-moz-placeholder {
 .modal-close{position: absolute;width: 35px;right: 10px;height: 35px;border: 0;top: 10px;z-index: 3;background: transparent;}
 .modal-close a{ width: 100%; height: 100%; z-index: 2; position: absolute; color: transparent; }
 .modal-close:hover::before, .modal-close:hover::after {
-  background: #1ebcc5;
+  background: #364775;
 }
 
 .modal-close::before, .modal-close::after {
